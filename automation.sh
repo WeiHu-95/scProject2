@@ -5,6 +5,6 @@ activate () {
 }
 activate
 rm -rf scProject2
-git clone https://github.com/parvathysajee/ScProject.git
-cd ScProject
-python classify.py  --model-name test --captcha-dir check_data --output stuff.txt --symbols symbols.txt
+git clone https://github.com/WeiHu-95/scProject2.git
+cd scProject2
+python classify.py  --model-name test --captcha-dir HUWE-project2rpi --output stuff.txt --symbols symbols.txt
