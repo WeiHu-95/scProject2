@@ -13,15 +13,6 @@ import argparse
 import tflite_runtime.interpreter as tflite
 from collections import OrderedDict 
 
-class my_dictionary(dict): 
-  
-    # __init__ function 
-    def __init__(self): 
-        self = dict() 
-          
-    # Function to add key:value 
-    def add(self, key, value): 
-        self[key] = value 
 
 def decode(characters, y):
     y = numpy.argmax(numpy.array(y), axis=1)
@@ -56,7 +47,6 @@ def main():
     symbols_file.close()
 
     print("Classifying captchas with symbol set {" + captcha_symbols + "}")
-    dict_obj = my_dictionary()
 
 
     with open(args.output, 'w',newline='\n') as output_file:
